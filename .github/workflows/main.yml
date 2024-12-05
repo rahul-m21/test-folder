@@ -1,0 +1,17 @@
+name: Run PyInstaller
+
+on:
+  workflow_dispatch: # Allows manual trigger
+  push:
+    branches:
+      - main
+
+jobs:
+  run-pyinstaller:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Use PyInstaller Runner Action
+        uses: rahul-m21/Test_Tool@v1.0.0
+        with:
+          target-repo-url: ${{ github.repository }}
