@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  run-pyinstaller:
+  run-pqc-assessment:
     runs-on: ubuntu-latest
 
     steps:
