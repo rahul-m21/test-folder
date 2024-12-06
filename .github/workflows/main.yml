@@ -1,4 +1,4 @@
-name: Run PyInstaller
+name: Run PQC_Assessment_Tool
 
 on:
   workflow_dispatch: # Allows manual trigger
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Use PyInstaller Runner Action
+      - name: Use PQC_Assessment Runner Action
         uses: rahul-m21/Test_Tool@v1.0.0
         with:
           target-repo-url: ${{ github.repository }}
