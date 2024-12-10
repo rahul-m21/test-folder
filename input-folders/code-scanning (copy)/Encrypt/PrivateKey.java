@@ -7,7 +7,7 @@ public class RSAExample {
     public static void main(String[] args) {
         try {
             // Step 1: Generate RSA Key Pair
-            KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
+            KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("EC");
             keyPairGenerator.initialize(2048); // Specify the key size (2048 bits)
             KeyPair keyPair = keyPairGenerator.generateKeyPair();
 
