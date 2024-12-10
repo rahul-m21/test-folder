@@ -46,7 +46,7 @@ public class CryptographicProgram {
             System.out.println("DH Public Key: " + dhPublicKey);
 
             // Generate EC Key Pair
-            KeyPairGenerator ecGen = KeyPairGenerator.getInstance("EC");
+            KeyPairGenerator ecGen = KeyPairGenerator.getInstance("ECDSA");
             ecGen.initialize(256);
             KeyPair ecKeyPair = ecGen.generateKeyPair();
             ECPrivateKeySpec ecPrivateKeySpec = new ECPrivateKeySpec(ecKeyPair.getPrivate().getEncoded(), null);
