@@ -34,12 +34,8 @@ phases:
   post_build:
     commands:
       - echo Uploading SARIF results to GitHub Security tab...
-      - if [ -f ./output-folder/results.sarif ]; then
-          echo SARIF file found. Uploading to GitHub...;
-          gh code-scanning upload --sarif=./output-folder/results.sarif --repo=$GITHUB_REPOSITORY --ref=$CODEBUILD_SOURCE_VERSION;
-        else
-          echo SARIF file not found. Skipping upload.;
-        fi
+      - echo SARIF file found. Uploading to GitHub...;
+      - gh code-scanning upload --sarif=./output-folder/results.sarif --repo=$GITHUB_REPOSITORY --ref=$CODEBUILD_SOURCE_VERSION;
       - echo Build completed successfully
 
 artifacts:
