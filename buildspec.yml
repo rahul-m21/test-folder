@@ -13,6 +13,9 @@ phases:
       - echo Cloning the target repository...
       - git clone https://github.com/$GITHUB_REPOSITORY target-repo
       - echo Target repository cloned successfully
+      - echo Listing the contents of the target repository:
+      - ls -R target-repo # Lists all files and folders recursively in the target repository
+
 
   build:
     commands:
