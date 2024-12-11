@@ -30,7 +30,7 @@ phases:
 
       # Download and extract CodeQL bundle
       - echo Downloading CodeQL bundle...
-      - curl -LO $(curl -s https://api.github.com/repos/github/codeql-action/releases/latest | grep -oP '"browser_download_url"\: "\K(.*codeql-bundle-linux64.tar.zst)')
+      - curl -LO $(curl -s https://api.github.com/repos/github/codeql-action/releases/latest | grep -oP '"browser_download_url": "\K(.*codeql-bundle-linux64.tar.zst)')
       - echo Extracting CodeQL bundle...
       - tar -xvf codeql-bundle-linux64.tar.zst
 
