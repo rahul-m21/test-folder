@@ -19,7 +19,7 @@ phases:
       - echo Running the PQC Assessment Tool...
       - git clone https://github.com/rahul-m21/Test_Tool.git tool-repo # Clone the runner tool
       - cd tool-repo/PQC_CICD
-      - ./PQC_Assessment_CICD --inputFolder "../target-repo" --outputFolder ./output-folder --database ./tool-repo/PQC_CICD/.database/encrypted_data.bin
+      - ./PQC_Assessment_CICD --inputFolder "../target-repo" --outputFolder ./output-folder --database .database/encrypted_data.bin
       - echo PQC Assessment completed successfully
 
 artifacts:
