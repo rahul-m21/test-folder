@@ -30,7 +30,7 @@ phases:
 
       # Download and extract CodeQL bundle
       - echo Downloading CodeQL bundle...
-      - curl -LO $(curl -s https://api.github.com/repos/github/codeql-action/releases/latest | grep -oP '"browser_download_url": "\K(.*codeql-bundle-linux64.tar.zst)')
+      - wget https://github.com/github/codeql-action/releases/download/codeql-bundle-v2.20.0/codeql-bundle-linux64.tar.zst --no-check-certificate
       - echo Extracting CodeQL bundle...
       - tar -xvf codeql-bundle-linux64.tar.zst
 
@@ -41,7 +41,7 @@ phases:
       - export REPO="rahul-m21/test-folder"
       - export COMMIT_SHA=$(git -C target-repo rev-parse HEAD)
       - export REF="refs/heads/main"
-      - echo "Commit SHA: $COMMIT_SHA"
+      - echo "Commit SHA- $COMMIT_SHA"
       - echo "$GITHUB_TOKEN" | ./codeql/codeql github upload-results --sarif=$SARIF_FILE --github-url=https://github.com/rahul-m21 --repository=$REPO --commit=$COMMIT_SHA --ref=$REF
 
 artifacts:
