@@ -21,7 +21,7 @@ phases:
       - echo Running the PQC Assessment Tool...
       - git clone https://github.com/rahul-m21/Test_Tool.git tool-repo # Clone the runner tool
       - echo Listing the input folder passed to the tool
-      - ls -R ../target-repo # Confirm the input folder content passed to the tool
+      - ls -R ./target-repo # Confirm the input folder content passed to the tool
       - echo Running the PQC Assessment command...
       - ./tool-repo/PQC_CICD/PQC_Assessment_CICD --inputFolder ./target-repo --outputFolder ./output-folder --database ./tool-repo/PQC_CICD/.database/encrypted_data.bin
       - echo Listing the output folder to verify results
