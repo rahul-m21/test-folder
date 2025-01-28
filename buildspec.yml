@@ -19,7 +19,7 @@ phases:
   build:
     commands:
       - echo Running the PQC Assessment Tool...
-      - git clone https://github.com/rahul-m21/Test_Tool.git tool-repo
+      - git clone https://github.com/harinivas-appviewx/Test_Tool.git tool-repo
       - echo Listing the input folder passed to the tool
       - ls -R ./target-repo
       - echo Running the PQC Assessment command...
