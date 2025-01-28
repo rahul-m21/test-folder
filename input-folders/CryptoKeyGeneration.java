@@ -19,7 +19,6 @@ import java.security.SecureRandom;
 import java.security.spec.ECPoint;
 import java.util.Arrays;
 
-
 public class CryptoDemo {
     public static void main(String[] args) {
         try {
@@ -49,7 +48,7 @@ public class CryptoDemo {
             // RSA Key Pair Generation
             System.out.println("\nGenerating RSA Key Pair...");
             RSAKeyPairGenerator rsaKeyPairGenerator = new RSAKeyPairGenerator();
-            rsaKeyPairGenerator.init(new RSAKeyGenerationParameters(BigInteger.valueOf(0x10001), random, 1024, 80));
+            rsaKeyPairGenerator.init(new RSAKeyGenerationParameters(BigInteger.valueOf(0x10001), random, 2048, 80));
             AsymmetricCipherKeyPair rsaKeyPair = rsaKeyPairGenerator.generateKeyPair();
             RSAKeyParameters rsaPublicKey = (RSAKeyParameters) rsaKeyPair.getPublic();
             System.out.println("RSA Public Key: " + rsaPublicKey);
